@@ -1,0 +1,25 @@
+body::before {
+	display: block;
+	content: "";
+	height: 60px;
+}
+
+#map {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+}
+
+#features, #course, #contact {
+	scroll-margin-top: 5em;
+}
+
+@media (max-width: 768px) {
+	#head-title {
+		margin-top: 20px;
+	}
+  .news-input {
+    width: 50%;
+  }
+
+}
