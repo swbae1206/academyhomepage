@@ -16,7 +16,6 @@ let publicDir = require('path').join(__dirname, "/public");
 console.log(publicDir);
 app.use(express.static(__dirname + '/public'));
 
-app.use("/img", express.static('images'));
 
 //REST API의 한가지 종류인 GET 리퀘스트를 정의하는 부분입니다.
 //app.get이라고 작성했기 때문에 get 요청으로 정의가 되고
