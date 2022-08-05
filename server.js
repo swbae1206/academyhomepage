@@ -14,7 +14,9 @@ app.use(express.urlencoded({ extended: true }));
 
 let publicDir = require('path').join(__dirname, "/public");
 console.log(publicDir);
-app.use(express.static(__dirname + '/public'));
+
+// app.use(express.static('public'));
+app.use(express.static('public'));
 
 
 //REST API의 한가지 종류인 GET 리퀘스트를 정의하는 부분입니다.
