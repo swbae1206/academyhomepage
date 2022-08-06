@@ -20,7 +20,7 @@
 
 	<!-- Navbar -->
 
-	<nav id="navbar" class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+	<nav id="navbar" class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top" collapseOnSelect>
 		<div class="container">
 			<a class="navbar-brand" href="/html/index.html">
 				<img src="/img/logo.jpg" width="210" alt="logo">
@@ -32,7 +32,7 @@
 			<div class="collapse navbar-collapse" id="navmenu">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item  mx-sm-4">
-						<a id="top" href="/html/index.html#features" class="anchor nav-link  fw-bold fs-5">차별화된 특징</a>
+						<a id="top" href="/html/index.html#features" class="nav-link  fw-bold fs-5">차별화된 특징</a>
 					</li>
 					<li class="nav-item  mx-sm-4">
 						<a href="/html/index.html#course" class="anchor nav-link fw-bold fs-5">강의 코스 안내</a>
@@ -53,7 +53,7 @@
 				<div>
 					<p id="head-title-1" class="fw-bold">최고의<br> <span class="text-warning">IT 전문가</span>를 양성합니다</p>
 					<p id="head-title-2" class="fw-bold">최고의<br> <span class="text-warning">IT 전문가</span>를 양성합니다</p>
-					<p class="my-4">
+					<p class="lead my-4">
 						개인별 목표와 비젼에 따른 IT 기술 확보 로드맵을 제시하고, 소수정예의 팀별 강의를 통해, 최신의 기술로 무장한 IT 전문가를 양성합니다.</p>
 					<button class="btn btn-primary btn-lg mb-3 mb-md-0 mt-2" data-bs-toggle="modal" data-bs-target="#enroll">상담 신청하기</button>
 				</div>
@@ -83,32 +83,29 @@
 
 	<!-- Boxes -->
 
-	<section class="p-3 pt-4 p-lg-5" id="features" style="background-color: lightgrey;">
+	<section class="p-3 pt-4 p-lg-5" id="features" style="background-color: rgb(233, 231, 231);">
 		<div class="container">
 			<h1 class="text-center fw-bold mb-4">차별화된 특징</h1>
-			<div class="row text-center g-5">
+			<div class="row text-center g-3">
 				<div class="col-md">
-					<div class="card img-fluid">
-						<img class="card-img-top" src="/img/feature-vision.jpg" alt="Card image" style="width:100%">
-						<div class="card-img-overlay d-flex align-items-end justify-content-center">
-							<a href="/html/vision.html" class="btn btn-secondary">Read More</a>
-						</div>
+					<div class="card shadow p-3 mb-4 bg-white">
+						<div class="card-header p-3 fs-4 fw-bold" style="background-color: rgb(233, 231, 231);">명확한 학습 목표/비젼 설정</div>
+							<p class="card-text my-4">잘못된 학습 방향 설정으로 인한 시간적 경제적 낭비 요소를 사전에 제거합니다</p>
+							<a href="/html/vision.html" class="btn btn-secondary">자세히 보기</a>
 					</div>
 				</div>
 				<div class="col-md">
-					<div class="card img-fluid">
-						<img class="card-img-top" src="/img/feature-roadmap.jpg" alt="Card image" style="width:100%">
-						<div class="card-img-overlay d-flex align-items-end justify-content-center">
-							<a href="/html/roadmap.html" class="btn btn-secondary">Read More</a>
-						</div>
+					<div class="card shadow p-3 mb-4 bg-white">
+						<div class="card-header p-3 fs-4 fw-bold" style="background-color: rgb(233, 231, 231);">효과적 학습 로드맵 제시</div>
+						<p class="card-text my-4">개인별 상황에 맞는 학습과정 설계로, 단계별 IT 기술 확보 방안을 제시 합니다</p>
+						<a href="/html/roadmap.html" class="btn btn-secondary">자세히 보기</a>
 					</div>
 				</div>
 				<div class="col-md">
-					<div class="card img-fluid">
-						<img class="card-img-top" src="/img/feature-result.jpg" alt="Card image" style="width:100%">
-						<div class="card-img-overlay d-flex align-items-end justify-content-center">
-							<a href="/html/result.html" class="btn btn-secondary">Read More</a>
-						</div>
+					<div class="card shadow p-3 mb-4 bg-white">
+						<div class="card-header p-3 fs-4 fw-bold" style="background-color: rgb(233, 231, 231);">학습 결과물의 개인 자산화</div>
+						<p class="card-text my-4">학습과정에서 생성되는 모든 결과물을 체계적으로 관리하여,  기술을 자산화 합니다 </p>
+						<a href="/html/result.html" class="btn btn-secondary">자세히 보기</a>
 					</div>
 				</div>
 			</div>
@@ -241,49 +238,49 @@
 
 	<!-- Lecture Course -->
 
-	<section id="course" class="p-3 pt-4 p-lg-5 bg-secondary">
+	<section id="course" class="p-3 pt-4 p-lg-5" style="background-color: rgb(233, 231, 231)">
 		<div class="container">
-			<h1 class="text-center text-white fw-bold mb-4">강의 코스 안내</h1>
+			<h1 class="text-center text-dark fw-bold mb-4">강의 코스 안내</h1>
 			<div class="row g-4 mb-4">
 				<div class="col-md-6 col-lg-3">
-					<div class="card">
+					<div class="card shadow p-1 mb-4 bg-light">
+						<img class="card-img-top border mb-2" src="/img/course-01.jpg" alt="">
 						<div class="card-body text-center">
-							<img class="mb-3 border border-secondary" width="90%" src="/img/course-01.jpg" alt="">
 							<h4 class="card-title mb-3 fw-bold">웹 개발 기초과정</h4>
-							<a href="/html/webdevelop01.html" class="btn btn-secondary mt-3">
+							<a href="/html/webdevelop01.html" class="btn btn-secondary mt-2">
 								<i class="bi bi-chevron-right">자세히 보기</i>
 							</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3">
-					<div class="card bg-light">
+					<div class="card shadow p-1 mb-4 bg-light">
+						<img class="card-img-top border mb-2" src="/img/course-02.jpg" alt="">
 						<div class="card-body text-center">
-							<img class="mb-3 border border-secondary" width="90%" src="/img/course-02.jpg" alt="">
 							<h4 class="card-title mb-3 fw-bold">React/Node.js 과정</h4>
-							<a href="/html/react.html" class="btn btn-secondary mt-3">
+							<a href="/html/webdevelop01.html" class="btn btn-secondary mt-2">
 								<i class="bi bi-chevron-right">자세히 보기</i>
 							</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3">
-					<div class="card bg-light">
+					<div class="card shadow p-1 mb-4 bg-light">
+						<img class="card-img-top border mb-2" src="/img/course-03.jpg" alt="">
 						<div class="card-body text-center">
-							<img class="mb-3 border border-secondary" width="90%" src="/img/course-03.jpg" alt="">
 							<h4 class="card-title mb-3 fw-bold">Python/Django 과정</h4>
-							<a href="/html/python.html" class="btn btn-secondary mt-3">
+							<a href="/html/webdevelop01.html" class="btn btn-secondary mt-2">
 								<i class="bi bi-chevron-right">자세히 보기</i>
 							</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3">
-					<div class="card bg-light">
+					<div class="card shadow p-1 mb-4 bg-light">
+						<img class="card-img-top border mb-2" src="/img/course-04.jpg" alt="">
 						<div class="card-body text-center">
-							<img class=" mb-3 border border-secondary" width="90%" src="/img/course-04.jpg" alt="">
-							<h4 class="card-title mb-3 fw-bold">JAVA/Spring Boot 과정</h4>
-							<a href="/html/java.html" class="btn btn-secondary mt-3">
+							<h4 class="card-title mb-3 fw-bold">Java/Spring Boot 과정</h4>
+							<a href="/html/webdevelop01.html" class="btn btn-secondary mt-2">
 								<i class="bi bi-chevron-right">자세히 보기</i>
 							</a>
 						</div>
@@ -292,44 +289,44 @@
 			</div>
 			<div class="row g-4">
 				<div class="col-md-6 col-lg-3">
-					<div class="card bg-light">
+					<div class="card shadow p-1 mb-4 bg-light">
+						<img class="card-img-top border mb-2" src="/img/course-05.jpg" alt="">
 						<div class="card-body text-center">
-							<img class="mb-3 border border-secondary" width="90%" src="/img/course-05.jpg" alt="">
-							<h4 class="card-title mb-3 fw-bold">Database 과정</h4>
-							<a href="/html/database.html" class="btn btn-secondary mt-3">
+							<h4 class="card-title mb-3 fw-bold">데이터베이스 과정</h4>
+							<a href="/html/webdevelop01.html" class="btn btn-secondary mt-2">
 								<i class="bi bi-chevron-right">자세히 보기</i>
 							</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3">
-					<div class="card bg-light">
+					<div class="card shadow p-1 mb-4 bg-light">
+						<img class="card-img-top border mb-2" src="/img/course-06.jpg" alt="">
 						<div class="card-body text-center">
-							<img class="mb-3 border border-secondary" width="90%" src="/img/course-06.jpg" alt="">
 							<h4 class="card-title mb-3 fw-bold">AI/Big Data 과정</h4>
-							<a href="/html/ai.html" class="btn btn-secondary mt-3">
+							<a href="/html/webdevelop01.html" class="btn btn-secondary mt-2">
 								<i class="bi bi-chevron-right">자세히 보기</i>
 							</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3">
-					<div class="card bg-light">
+					<div class="card shadow p-1 mb-4 bg-light">
+						<img class="card-img-top border mb-2" src="/img/course-07.jpg" alt="">
 						<div class="card-body text-center">
-							<img class="mb-3 border border-secondary" width="90%" src="/img/course-07.jpg" alt="">
 							<h4 class="card-title mb-3 fw-bold">프로젝트 실습 과정</h4>
-							<a href="/html/project.html" class="btn btn-secondary mt-3">
+							<a href="/html/webdevelop01.html" class="btn btn-secondary mt-2">
 								<i class="bi bi-chevron-right">자세히 보기</i>
 							</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3">
-					<div class="card bg-light">
+					<div class="card shadow p-1 mb-4 bg-light">
+						<img class="card-img-top border mb-2" src="/img/course-08.jpg" alt="">
 						<div class="card-body text-center">
-							<img class=" mb-3 border border-secondary" width="90%" src="/img/course-08.jpg" alt="">
 							<h4 class="card-title mb-3 fw-bold">포트폴리오/면접 특강</h4>
-							<a href="/html/portfolio.html" class="btn btn-secondary mt-3">
+							<a href="/html/webdevelop01.html" class="btn btn-secondary mt-2">
 								<i class="bi bi-chevron-right">자세히 보기</i>
 							</a>
 						</div>
@@ -346,22 +343,23 @@
 			<div class="row g-4">
 				<div class="col-md">
 					<h1 class="text-center mb-4 fw-bold">연락처 및 위치</h1>
-					<ul class="list-group list-group-flush lead">
+					<ul class="list-group list-group-flush">
 						<li class="list-group-item">
-							<span class="fw-bold">주소</span>
-							<p>부산광역시 남구 용소로 14(대연동 62-1) 3층<br>(경성대부경대역 3, 5번 출구에서 부경대 방면 100미터)</p>
+							<span class="fw-bold lead">주소</span>
+							<div>	부산광역시 남구 용소로 14(대연동 62-1) 3층<br>(경성대부경대역 3, 5번 출구에서 부경대 방면 100미터)</div>
+						
 						</li>
 						<li class="list-group-item">
-							<span class="fw-bold">상담 및 안내 전화</span>
-							<p>(555) 555-5555</p>
+							<span class="fw-bold lead">상담 및 안내 전화</span>
+							<div>(555) 555-5555</div>
 						</li>
 						<li class="list-group-item">
-							<span class="fw-bold"> Email</span>
-							<p>student@academy.com</p>
+							<span class="fw-bold lead">Email</span>
+							<div>student@academy.com</div>
 						</li>
 						<li class="list-group-item">
-							<span class="fw-bold"> 강의 시간</span>
-							<p>오전 10시 ~ 오후 10시</p>
+							<span class="fw-bold lead">강의 시간</span>
+							<div>오전 10시 ~ 오후 10시</div>
 						</li>
 					</ul>
 				</div>
@@ -419,7 +417,6 @@
 			</div>
 		</div>
 	</div>
-
 </body>
 
 </html>
