@@ -14,12 +14,45 @@ body::before {
 	scroll-margin-top: 5em;
 }
 
+#head-title-1 {
+	font-size: 50px;
+}
+
+#head-title-2 {
+	font-size: 30px;
+	display: none;
+}
+
+#sub-vision {
+	background-image: url('/img/back-01.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#sub-roadmap {
+	background-image: url('/img/back-02.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#sub-result {
+	background-image: url('/img/back-03.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#sub-title-01, #sub-title-02 {
+	text-shadow: 0px 0px 5px black;
+}
+
 @media (max-width: 768px) {
-	#head-title {
+
+	#head-title-1 {
+			display: none;
+	}
+	#head-title-2 {
+		display: block;
 		margin-top: 20px;
 	}
-  .news-input {
-    width: 50%;
-  }
 
 }
