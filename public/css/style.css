@@ -23,6 +23,18 @@ body::before {
 	display: none;
 }
 
+#course-title-01 {
+	background-image: url('/img/course-title-01.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#course-title-10 {
+	background-image: url('/img/course-title-10.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 #sub-vision {
 	background-image: url('/img/back-01.jpg');
 	background-repeat: no-repeat;
