@@ -2,6 +2,8 @@
 var express = require('express')
 const cors = require('cors');
 
+const dbConfig = require("./dbConfig");
+
 //app이라는 변수에 express 함수의 변환 값을 저장한다.
 var app = express()
 
@@ -25,6 +27,24 @@ app.use(express.static('public'));
 //REST API의 종류 (get, post, update, delete 등등)을 사용하여 End Point를 작성하실 수 있습니다.
 app.get('/', function (req, res) {
 	res.sendFile(publicDir + "/html/index.html");
+})
+
+app.post('/counseling', function (req, res) {
+	const queryText = 'INSERT INTO counseling VALUES($1, $2, $3, $4)';
+	const values = [
+		req.body.name,
+		req.body.phone,
+		req.body.email,
+		""
+	];
+	dbConfig.dbClient
+		.query(queryText, values)
+		.then((result) => {
+			res.end();
+		})
+		.catch(e => {
+			res.status(500).send({ data: e.message });
+		});
 })
 
 
