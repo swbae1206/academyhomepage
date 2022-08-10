@@ -30,6 +30,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/counseling', function (req, res) {
+
 	const queryText = 'select * from counseling';
 	const values = [
 	];
@@ -44,11 +45,13 @@ app.get('/counseling', function (req, res) {
 })
 
 app.post('/counseling', function (req, res) {
-	const queryText = 'INSERT INTO counseling (name, phone, email) VALUES($1, $2, $3)';
+
+	const queryText = 'INSERT INTO counseling (name, phone, email, date) VALUES($1, $2, $3, $4)';
 	const values = [
 		req.body.name,
 		req.body.phone,
-		req.body.email
+		req.body.email,
+		getDatetime()
 	];
 	dbClient
 		.query(queryText, values)
@@ -62,9 +65,10 @@ app.post('/counseling', function (req, res) {
 })
 
 app.post('/newsletter', function (req, res) {
-	const queryText = 'INSERT INTO newsletter (email) VALUES($1)';
+	const queryText = 'INSERT INTO newsletter (email, date) VALUES($1, $2)';
 	const values = [
-		req.body.email
+		req.body.email,
+		getDatetime()
 	];
 	dbClient
 		.query(queryText, values)
@@ -76,6 +80,35 @@ app.post('/newsletter', function (req, res) {
 			res.status(500).send({ data: e.message });
 		});
 })
+
+app.post('/fee', function (req, res) {
+	const queryText = 'INSERT INTO fee (name, phone, date) VALUES($1, $2, $3)';
+	const values = [
+		req.body.name,
+		req.body.email,
+		getDatetime()
+	];
+	dbClient
+		.query(queryText, values)
+		.then((result) => {
+			console.log("success");
+			res.end();
+		})
+		.catch(e => {
+			res.status(500).send({ data: e.message });
+		});
+})
+
+function getDatetime() {
+	let i = new Date();
+	i = i.getFullYear() + "-"
+		+ (i.getMonth() + 1) + "-"
+		+ i.getDate() + " "
+		+ i.getHours() + ":"
+		+ i.getMinutes() + ":"
+		+ i.getSeconds();
+	return i;
+}
 
 // express 서버를 실행할 때 필요한 포트 정의 및 실행 시 callback 함수를 받습니다
 app.listen(port, function () {

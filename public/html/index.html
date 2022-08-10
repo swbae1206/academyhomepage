@@ -12,7 +12,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		crossorigin="anonymous"></script>
-
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<title>부산 IT 학원 One IT Academy</title>
 	<meta name="description" content="부산 IT학원, 부산 IT 학원, 부산 코딩학원, 부산 코딩 학원, 웹 개발, IT 개발, 웹개발, IT개발, IT Academy">
 </head>
@@ -50,7 +51,7 @@
 
 	<section class="bg-dark text-light text-start mt-3">
 		<div class="container-fluid p-0">
-			<div id="main" >
+			<div id="main">
 				<div class="container pt-5">
 					<h1 id="head-title" class="fw-bold">최고의<br> <span class="text-warning">IT 전문가</span>를 양성합니다</h1>
 					<p class="lead my-4 fw-bold">
@@ -68,14 +69,14 @@
 			<div class="row align-items-center">
 				<div class="col-12 col-md-5">
 					<div class="lead fw-bold">IT 학습에 도움이 되는 Newsletter를 받아 보세요.</div>
-					
+
 				</div>
 				<div class="col-12 mt-3 mt-md-0 col-md-7">
 					<form>
-					<div class="input-group">
-						<input id="newsletter-email" type="text" class="form-control news-input" placeholder="이메일을 입력하세요">
-						<button class="btn btn-dark btn-lg" type="button" onclick="Newsletter()">받아보기</button>
-					</div>
+						<div class="input-group">
+							<input id="newsletter-email" type="text" class="form-control news-input" placeholder="이메일을 입력하세요">
+							<button class="btn btn-dark btn-lg" type="button" onclick="Newsletter()">받아보기</button>
+						</div>
 					</form>
 				</div>
 			</div>
@@ -90,9 +91,10 @@
 			<div class="row text-center g-3">
 				<div class="col-md">
 					<div class="card shadow p-3 mb-4 bg-white">
-						<div class="card-header p-3 fs-4 fw-bold" style="background-color: rgb(233, 231, 231);">명확한 학습 목표/비젼 설정</div>
-							<p class="card-text my-4">잘못된 학습 방향 설정으로 인한 시간적 경제적 낭비 요소를 사전에 제거합니다</p>
-							<a href="/html/vision.html" class="btn btn-secondary">자세히 보기</a>
+						<div class="card-header p-3 fs-4 fw-bold" style="background-color: rgb(233, 231, 231);">명확한 학습 목표/비젼 설정
+						</div>
+						<p class="card-text my-4">잘못된 학습 방향 설정으로 인한 시간적 경제적 낭비 요소를 사전에 제거합니다</p>
+						<a href="/html/vision.html" class="btn btn-secondary">자세히 보기</a>
 					</div>
 				</div>
 				<div class="col-md">
@@ -105,7 +107,7 @@
 				<div class="col-md">
 					<div class="card shadow p-3 mb-4 bg-white">
 						<div class="card-header p-3 fs-4 fw-bold" style="background-color: rgb(233, 231, 231);">학습 결과물의 개인 자산화</div>
-						<p class="card-text my-4">학습과정에서 생성되는 모든 결과물을 체계적으로 관리하여,  기술을 자산화 합니다 </p>
+						<p class="card-text my-4">학습과정에서 생성되는 모든 결과물을 체계적으로 관리하여, 기술을 자산화 합니다 </p>
 						<a href="/html/result.html" class="btn btn-secondary">자세히 보기</a>
 					</div>
 				</div>
@@ -177,7 +179,8 @@
 						</button>
 					</h2>
 					<div id="question-one" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-						<div class="accordion-body">당 학원은 수강생의 IT 학습 목적과 목표를 달성하기 위한 단계별 학습 로드맵을 제시합니다. 이를 통해 IT 학습 과정에서 흔히 발생하는 시간적, 경제적 낭비를 제거하고, 학습 효과를 극대화하며, 현업에서 즉시 적용 가능한 실무형 IT 기술 전문가를 양성합니다.
+						<div class="accordion-body">당 학원은 수강생의 IT 학습 목적과 목표를 달성하기 위한 단계별 학습 로드맵을 제시합니다. 이를 통해 IT 학습 과정에서 흔히 발생하는
+							시간적, 경제적 낭비를 제거하고, 학습 효과를 극대화하며, 현업에서 즉시 적용 가능한 실무형 IT 기술 전문가를 양성합니다.
 						</div>
 					</div>
 				</div>
@@ -190,7 +193,8 @@
 						</button>
 					</h2>
 					<div id="question-two" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-						<div class="accordion-body">당 학원은 소수정예의 팀별 강의 방식입니다. IT 기술의 특성상 가장 학습 효과가 큰 팀별 6~8명을 기준으로 하며, 대면 방식으로만 진행됩니다.
+						<div class="accordion-body">당 학원은 소수정예의 팀별 강의 방식입니다. IT 기술의 특성상 가장 학습 효과가 큰 팀별 6~8명을 기준으로 하며, 대면 방식으로만
+							진행됩니다.
 						</div>
 					</div>
 				</div>
@@ -203,7 +207,8 @@
 						</button>
 					</h2>
 					<div id="question-three" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-						<div class="accordion-body">기본적인 강의 코스는 '강의 코스 안내'를 참고해 주세요. 개인별 강의 코스는 면담 후 결정되며, 개인별 IT 학습 능력에 따라 코스가 정해집니다. 수강료는 코스별 약간씩 차이가 있으며, 면담 신청을 하시면 자세한 정보를 제공 받으실 수 있습니다.
+						<div class="accordion-body">기본적인 강의 코스는 '강의 코스 안내'를 참고해 주세요. 개인별 강의 코스는 면담 후 결정되며, 개인별 IT 학습 능력에 따라 코스가
+							정해집니다. 수강료는 코스별 약간씩 차이가 있으며, 면담 신청을 하시면 자세한 정보를 제공 받으실 수 있습니다.
 						</div>
 					</div>
 				</div>
@@ -216,7 +221,8 @@
 						</button>
 					</h2>
 					<div id="question-four" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-						<div class="accordion-body">특별히 준비할 것은 없습니다. 본 학원은 모든 강의가 실습식 강의로 진행되기 때문에, 학원의 노트북과 모니터를 사용합니다. 더 적극적인 학습을 위해 개인별 노트북을 준비하셔도 됩니다. 노트북의 사양은 인텔 	코어 i5 이상, 메모리 8G 이상, 화면 크기가 14인치 이상이면 원할하게 수업과 개별 학습이 가능합니다.
+						<div class="accordion-body">특별히 준비할 것은 없습니다. 본 학원은 모든 강의가 실습식 강의로 진행되기 때문에, 학원의 노트북과 모니터를 사용합니다. 더 적극적인 학습을
+							위해 개인별 노트북을 준비하셔도 됩니다. 노트북의 사양은 인텔 코어 i5 이상, 메모리 8G 이상, 화면 크기가 14인치 이상이면 원할하게 수업과 개별 학습이 가능합니다.
 						</div>
 					</div>
 				</div>
@@ -229,7 +235,8 @@
 						</button>
 					</h2>
 					<div id="question-five" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-						<div class="accordion-body"> 강의 시간은 오전 10시 ~ 오후 10시까지 입니다. 주중반은 주 2회이며, 1회 강의시간은 3시간입니다. 주말반도 별도로 운영하며, 주중반과 동일합니다. 경우에 따라 보충 강의시간이 있을 수 있습니다. 
+						<div class="accordion-body"> 강의 시간은 오전 10시 ~ 오후 10시까지 입니다. 주중반은 주 2회이며, 1회 강의시간은 3시간입니다. 주말반도 별도로 운영하며, 주중반과
+							동일합니다. 경우에 따라 보충 강의시간이 있을 수 있습니다.
 						</div>
 					</div>
 				</div>
@@ -337,34 +344,34 @@
 		</div>
 	</section>
 
-		<!-- Schedult & fee -->
-		
-		<section class="text-light p-3" style="background-color:blueviolet">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-12 col-md-3">
-						<div class="fs-3 fw-bold p-3">수강료 및 강의시간 조회</div>
-					</div>
-					<div class="col-12 col-md-9">
-						<form>
+	<!-- Schedult & fee -->
+
+	<section class="text-light p-3" style="background-color:blueviolet">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-12 col-md-3">
+					<div class="fs-3 fw-bold p-3">수강료 및 강의시간 조회</div>
+				</div>
+				<div class="col-12 col-md-9">
+					<form>
 						<div class="row g-3">
 							<div class="col-sm-4">
 								<label for="exampleFormControlInput1" class="form-label fw-bold">이름</label>
-								<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="이름">
+								<input id="fee-name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="이름">
 							</div>
 							<div class="col-sm-5">
 								<label for="exampleFormControlInput1" class="form-label fw-bold">전화번호</label>
-								<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="폰번호">
+								<input id="fee-phone" type="text" class="form-control" id="exampleFormControlInput1" placeholder="폰번호">
 							</div>
 							<div class="col-sm-3">
 								<input type="checkbox" for="exampleFormControlInput1" class="form-label"> 개인정보 제공 동의하기</label>
 								<button type="submit" class="btn btn-primary w-100 mt-2 fw-bold">조회하기</button>
 							</div>
 						</div>
-						</form>
-					</div>
+					</form>
 				</div>
-				<!-- <div class="row align-items-center">
+			</div>
+			<!-- <div class="row align-items-center">
 					<div class="col-12 col-md-3">
 						<div class="fs-3 fw-bold p-3">수강료 및 강의 시간 조회</div>
 					</div>
@@ -385,8 +392,8 @@
 						</div>
 					</div>
 				</div> -->
-			</div>
-		</section>
+		</div>
+	</section>
 
 	<!-- Contact Info -->
 
@@ -398,8 +405,8 @@
 					<ul class="list-group list-group-flush">
 						<li class="list-group-item">
 							<span class="fw-bold lead">주소</span>
-							<div>	부산광역시 남구 용소로 14(대연동 62-1) 3층<br>(경성대부경대역 3, 5번 출구에서 부경대 방면 100미터)</div>
-						
+							<div> 부산광역시 남구 용소로 14(대연동 62-1) 3층<br>(경성대부경대역 3, 5번 출구에서 부경대 방면 100미터)</div>
+
 						</li>
 						<li class="list-group-item">
 							<span class="fw-bold lead">상담 및 안내 전화</span>
@@ -462,7 +469,7 @@
 							<input type="text" class="form-control" id="email" name="email">
 						</div>
 						<!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-						<button type="button" class="btn btn-success w-100" onclick="Counseling()">상담신청하기</button>
+						<button type="button" class="custom-close btn btn-success w-100" onclick="Counseling()">상담신청하기</button>
 					</form>
 				</div>
 				<div class="modal-footer">
@@ -471,15 +478,16 @@
 		</div>
 	</div>
 	<script>
-		verifyEmail = function (value) {
-				var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 
-				if (value.match(regExp) != null) {
-					return true;
-				}
-				else {
-					return false;
-				}
+		verifyEmail = function (value) {
+			var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+
+			if (value.match(regExp) != null) {
+				return true;
+			}
+			else {
+				return false;
+			}
 		};
 
 		function Counseling() {
@@ -502,35 +510,66 @@
 				body: JSON.stringify({
 					name: name.value,
 					phone: phone.value,
-					email: email.value
+					email: email.value,
 				}),
 			})
-			.then(() => alert("상담신청이 접수되었습니다."))
-			.catch(() => alert("상담신청이 접수가 실패하였습니다.") )
+				.then(function () {
+					$('#enroll').modal('hide');
+					alert("aaaa");
+				})
+				.catch(() => alert("상담신청이 접수가 실패하였습니다."))
 		}
 
 		function Newsletter() {
-				let email = document.getElementById("newsletter-email");
-				if (email.value.trim() === "") {
-					alert("email을 입력하세요.");
-					return;
-				}
-				if(!verifyEmail(email.value)) {
-					alert("정확한 email을 입력하세요.");
-					return;
-				}
-				fetch("http://oneitacademy.co.kr/newsletter", {
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify({
-						email: email.value
-					}),
-				})
-					.then(() => alert("Newsletter 받아보기가 등록되었습니다."))
-					.catch(() => alert("Newsletter 받아보기 등록이 실패했습니다."))
+			let email = document.getElementById("newsletter-email");
+			if (email.value.trim() === "") {
+				alert("email을 입력하세요.");
+				return;
 			}
+			if (!verifyEmail(email.value)) {
+				alert("정확한 email을 입력하세요.");
+				return;
+			}
+			fetch("http://oneitacademy.co.kr/newsletter", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					email: email.value
+				}),
+			})
+				.then(function () {
+					email.value = "";
+					alert("Newsletter 받아보기가 dkwn 등록되었습니다.");
+				})
+				.catch(() => alert("Newsletter 받아보기 등록이 실패했습니다."))
+		}
+
+		function Fee() {
+			let name = document.getElementById("fee-name");
+			let phone = document.getElementById("fee-phone");
+			if (name.value.trim() === "") {
+				alert("이름을 입력하세요.");
+				return;
+			}
+			if (phone.value.trim() === "") {
+				alert("폰번호를 입력하세요.");
+				return;
+			}
+			fetch("http://oneitacademy.co.kr/newsletter", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					name: name.value,
+					phone: phone.value,
+				}),
+			})
+				.then(() => alert("수강료와 강의시간에 대해 곧 전화로 상세히 안내드리겠습니다.\n감사합니다"))
+				.catch(() => alert("수강료 및 강의시간 보기가 실패했습니다."))
+		}
 	</script>
 </body>
 
