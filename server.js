@@ -29,6 +29,20 @@ app.get('/', function (req, res) {
 	res.sendFile(publicDir + "/html/index.html");
 })
 
+app.get('/counseling', function (req, res) {
+	const queryText = 'select * from counseling';
+	const values = [
+	];
+	dbClient
+		.query(queryText, values)
+		.then((result) => {
+			res.send(JSON.stringify(result.rows));
+		})
+		.catch(e => {
+			res.status(500).send({ data: e.message });
+		});
+})
+
 app.post('/counseling', function (req, res) {
 	const queryText = 'INSERT INTO counseling (name, phone, email) VALUES($1, $2, $3)';
 	const values = [
