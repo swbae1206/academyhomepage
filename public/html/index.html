@@ -67,14 +67,14 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-12 col-md-5">
-					<div>IT 학습에 도움이 되는 Newsletter를 받아 보세요.</div>
+					<div class="lead fw-bold">IT 학습에 도움이 되는 Newsletter를 받아 보세요.</div>
 					
 				</div>
 				<div class="col-12 mt-3 mt-md-0 col-md-7">
 					<form>
 					<div class="input-group">
-						<input type="text" class="form-control news-input" placeholder="이메일을 입력하세요" required>
-						<button class="btn btn-dark btn-lg" type="submit">받아보기</button>
+						<input id="newsletter-email" type="text" class="form-control news-input" placeholder="이메일을 입력하세요">
+						<button class="btn btn-dark btn-lg" type="button" onclick="Newsletter()">받아보기</button>
 					</div>
 					</form>
 				</div>
@@ -190,7 +190,7 @@
 						</button>
 					</h2>
 					<div id="question-two" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-						<div class="accordion-body">당 학원은 소수정예의 팀별 강의 방식입니다. IT 기술의 특성상 가장 학습 효과가 큰 팀별 6~8명을 기준으로 하며, 대변 방식으로만 진행됩니다.
+						<div class="accordion-body">당 학원은 소수정예의 팀별 강의 방식입니다. IT 기술의 특성상 가장 학습 효과가 큰 팀별 6~8명을 기준으로 하며, 대면 방식으로만 진행됩니다.
 						</div>
 					</div>
 				</div>
@@ -448,21 +448,21 @@
 						상담 신청을 하시면,<br>강의와 관련된 모든 사항을<br>친절히 안내해 드리겠습니다
 					</div>
 					<hr>
-					<form action="http://localhost:3500/counseling", method="POST">
+					<form>
 						<div class="mb-3">
 							<label for="name" class="col-form-label lead fw-bold">* 이름</label>
-							<input type="text" class="form-control" id="name" name="name" required>
+							<input type="text" class="form-control" id="name" name="name">
 						</div>
 						<div class="mb-3">
 							<label for="phone" class="col-form-label lead fw-bold">* 휴대폰 번호</label>
-							<input type="text" class="form-control" id="phone" name="phone" required>
+							<input type="text" class="form-control" id="phone" name="phone">
 						</div>
 						<div class="mb-3">
 							<label for="email" class="col-form-label lead fw-bold"> &nbsp;e-Mail</label>
 							<input type="text" class="form-control" id="email" name="email">
 						</div>
 						<!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-						<button type="submit" class="btn btn-success w-100">상담신청하기</button>
+						<button type="button" class="btn btn-success w-100" onclick="Counseling()">상담신청하기</button>
 					</form>
 				</div>
 				<div class="modal-footer">
@@ -471,7 +471,66 @@
 		</div>
 	</div>
 	<script>
+		verifyEmail = function (value) {
+				var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 
+				if (value.match(regExp) != null) {
+					return true;
+				}
+				else {
+					return false;
+				}
+		};
+
+		function Counseling() {
+			let name = document.getElementById("name");
+			let phone = document.getElementById("phone");
+			let email = document.getElementById("email");
+			if (name.value.trim() === "") {
+				alert("이름을 입력해야 합니다")
+				return;
+			}
+			if (phone.value.trim() === "") {
+				alert("폰번호를 입력해야 합니다")
+				return;
+			}
+			fetch("http://43.200.81.134/counseling", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					name: name.value,
+					phone: phone.value,
+					email: email.value
+				}),
+			})
+			.then(() => alert("상담신청이 접수되었습니다."))
+			.catch(() => alert("상담신청이 접수가 실패하였습니다.") )
+		}
+
+		function Newsletter() {
+				let email = document.getElementById("newsletter-email");
+				if (email.value.trim() === "") {
+					alert("email을 입력하세요.");
+					return;
+				}
+				if(!verifyEmail(email.value)) {
+					alert("정확한 email을 입력하세요.");
+					return;
+				}
+				fetch("http://43.200.81.134/newsletter", {
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						email: email.value
+					}),
+				})
+					.then(() => alert("Newsletter 받아보기가 등록되었습니다."))
+					.catch(() => alert("Newsletter 받아보기 등록이 실패했습니다."))
+			}
 	</script>
 </body>
 

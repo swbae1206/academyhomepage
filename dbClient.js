@@ -1,12 +1,11 @@
-const dbSetting = require('./dbSetting');
 const { Client } = require('pg');
 
 const dbClient = new Client({
-	user: dbSetting.user,
-	password: dbSetting.password,
-	host: dbSetting.host,
-	port: dbSetting.port,
-	database: dbSetting.database
+	user: "swbae01",
+	password: "qlfyd",
+	host: "43.200.81.134",
+	port: 5432,
+	database: "academyhomepage"
 })
 
 dbClient.connect(err => {
@@ -16,3 +15,7 @@ dbClient.connect(err => {
 		console.log('connected')
 	}
 }); 
+
+module.exports = {
+	dbClient: dbClient
+}

@@ -2,7 +2,7 @@
 var express = require('express')
 const cors = require('cors');
 
-const dbConfig = require("./dbConfig");
+const dbClient = require("./dbClient");
 
 //app이라는 변수에 express 함수의 변환 값을 저장한다.
 var app = express()
@@ -30,16 +30,16 @@ app.get('/', function (req, res) {
 })
 
 app.post('/counseling', function (req, res) {
-	const queryText = 'INSERT INTO counseling VALUES($1, $2, $3, $4)';
+	const queryText = 'INSERT INTO counseling (name, phone, email) VALUES($1, $2, $3)';
 	const values = [
 		req.body.name,
 		req.body.phone,
-		req.body.email,
-		""
+		req.body.email
 	];
-	dbConfig.dbClient
+	dbClient
 		.query(queryText, values)
 		.then((result) => {
+			console.log("success");
 			res.end();
 		})
 		.catch(e => {
@@ -47,6 +47,21 @@ app.post('/counseling', function (req, res) {
 		});
 })
 
+app.post('/newsletter', function (req, res) {
+	const queryText = 'INSERT INTO newsletter (email) VALUES($1)';
+	const values = [
+		req.body.email
+	];
+	dbClient
+		.query(queryText, values)
+		.then((result) => {
+			console.log("success");
+			res.end();
+		})
+		.catch(e => {
+			res.status(500).send({ data: e.message });
+		});
+})
 
 // express 서버를 실행할 때 필요한 포트 정의 및 실행 시 callback 함수를 받습니다
 app.listen(port, function () {
