@@ -16,6 +16,4 @@ dbClient.connect(err => {
 	}
 }); 
 
-module.exports = {
-	dbClient: dbClient
-}
+module.exports = dbClient;
