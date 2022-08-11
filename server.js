@@ -82,11 +82,12 @@ app.post('/newsletter', function (req, res) {
 })
 
 app.post('/fee', function (req, res) {
-	const queryText = 'INSERT INTO fee (name, phone, date) VALUES($1, $2, $3)';
+	const queryText = 'INSERT INTO fee (name, phone, date, courses) VALUES($1, $2, $3, $4)';
 	const values = [
 		req.body.name,
-		req.body.email,
-		getDatetime()
+		req.body.phone,
+		getDatetime(),
+		req.body.courses
 	];
 	dbClient
 		.query(queryText, values)
