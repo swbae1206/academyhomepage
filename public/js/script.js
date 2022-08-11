@@ -62,7 +62,7 @@ function Newsletter() {
 		alert("정확한 email을 입력하세요.");
 		return;
 	}
-	fetch("http://oneitacademy.co.kr/newsletter", {
+	fetch("http://localhost:3500/newsletter", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -73,7 +73,7 @@ function Newsletter() {
 	})
 		.then(function () {
 			email.value = "";
-			alert("Newsletter 받아보기가 dkwn 등록되었습니다.");
+			alert("Newsletter 받아보기가 등록되었습니다.");
 		})
 		.catch(() => alert("Newsletter 받아보기 등록이 실패했습니다."))
 }
