@@ -62,7 +62,7 @@ function Newsletter() {
 		alert("정확한 email을 입력하세요.");
 		return;
 	}
-	fetch("http://localhost:3500/newsletter", {
+	fetch("http://oneitacademy.co.kr/newsletter", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -105,7 +105,7 @@ function Fee() {
 		return;
 	}
 
-	fetch("http://localhost:3500/fee", {
+	fetch("http://oneitacademy.co.kr/fee", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
