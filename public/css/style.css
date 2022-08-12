@@ -36,7 +36,36 @@ body::before {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-
+#course-title-03 {
+	background-image: url('/img/course-title-03.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#course-title-04 {
+	background-image: url('/img/course-title-04.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#course-title-05 {
+	background-image: url('/img/course-title-05.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#course-title-06 {
+	background-image: url('/img/course-title-06.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#course-title-07 {
+	background-image: url('/img/course-title-07.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#course-title-08 {
+	background-image: url('/img/course-title-08.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 #course-title-10 {
 	background-image: url('/img/course-title-10.jpg');
 	background-repeat: no-repeat;
@@ -88,6 +117,11 @@ body::before {
 	#head-title {
 			font-size: 40px;
 		}
+	#sub-vision {
+		background-image: url('/img/back-01-01.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 }
 
 @media (max-width: 992px) {
