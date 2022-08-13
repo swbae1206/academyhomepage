@@ -94,6 +94,17 @@ body::before {
 	text-shadow: 0px 0px 5px black;
 }
 
+.fee-circle {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+
+.fee-selector {
+	 text-decoration: none;
+	 color: black;
+}
+
 @media(max-width: 350px) {
 	#head-title {
 		font-size: 30px;
@@ -102,6 +113,12 @@ body::before {
 	#main {
 		height: 450px;
 	}
+.fee-circle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 }
 
 @media (min-width: 351px) and (max-width: 576px) {
@@ -111,6 +128,12 @@ body::before {
 	#main {
 		height: 370px;
 	}
+
+.fee-circle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 }
 
 @media (min-width: 577px) and (max-width: 768px) {
@@ -122,10 +145,4 @@ body::before {
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
-}
-
-@media (max-width: 992px) {
-}
-
-@media (max-width: 1400px) {
 }

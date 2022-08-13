@@ -3,7 +3,7 @@ const { Client } = require('pg');
 const dbClient = new Client({
 	user: "swbae01",
 	password: "qlfyd",
-	host: "oneitacademy.co.kr",
+	host: "oneitacademy.com",
 	port: 5432,
 	database: "academyhomepage"
 })

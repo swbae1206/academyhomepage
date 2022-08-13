@@ -27,7 +27,7 @@ function Counseling() {
 		alert("개인정보 제공에 동의해 주세요.");
 		return;
 	}
-	fetch("http://oneitacademy.co.kr/counseling", {
+	fetch("https://oneitacademy.com/counseling", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -62,7 +62,7 @@ function Newsletter() {
 		alert("정확한 email을 입력하세요.");
 		return;
 	}
-	fetch("http://oneitacademy.co.kr/newsletter", {
+	fetch("https://oneitacademy.com/newsletter", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -105,7 +105,7 @@ function Fee() {
 		return;
 	}
 
-	fetch("http://oneitacademy.co.kr/fee", {
+	fetch("https://oneitacademy.com/fee", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -117,8 +117,10 @@ function Fee() {
 		}),
 	})
 		.then(function () {
-			$('#feesearch').modal('hide');
-			alert("상담신청이 완료되었습니다.\n수강료와 강의시간에 대해, 곧 담당자가 전화로 상세히 설명드릴 예정입니다.")
+			alert("상담신청이 완료되었습니다.\n수강료와 강의시간에 대해, 곧 담당자가 전화로 상세히 설명드릴 예정입니다.");
+			$("#feesearch").modal('hide');
 		})
-		.catch(() => alert("수강료 및 강의시간 보기가 실패했습니다."))
+		.catch(function () {
+			alert("수강료 및 강의시간 보기가 실패했습니다.")
+		})
 }
