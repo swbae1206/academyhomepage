@@ -125,6 +125,11 @@ body::before {
 		#agree-check {
 			margin-top: 10px;
 		}
+
+		#course-title {
+			font-size: 30px;
+					font-weight:bolder;
+		}
 }
 
 @media (min-width: 388px) and (max-width: 800px) {
@@ -141,5 +146,10 @@ body::before {
 
 	#agree-check {
 		margin-top: 10px;
+	}
+
+	#course-title {
+		font-size: 30px;
+		font-weight: bolder;
 	}
 }
