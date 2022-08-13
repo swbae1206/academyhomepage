@@ -14,16 +14,20 @@ body::before {
 	scroll-margin-top: 5em;
 }
 
-#head-title {
-	font-size: 50px;
-	line-height: 1.5em;
+#showcase {
+	display: none;
 }
 
 #main {
 	background-image: url('/img/main-100.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 400px;
+	height: 350px;
+}
+
+.head-title {
+	font-size: 45px;
+	line-height: 130%;
 }
 
 #course-title-01 {
@@ -105,44 +109,37 @@ body::before {
 	 color: black;
 }
 
-@media(max-width: 350px) {
-	#head-title {
-		font-size: 30px;
-	}
-
-	#main {
-		height: 450px;
-	}
-.fee-circle {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-}
-
-@media (min-width: 351px) and (max-width: 576px) {
-	#head-title {
-			font-size: 30px;
-	}
-	#main {
-		height: 370px;
-	}
-
-.fee-circle {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-}
-
-@media (min-width: 577px) and (max-width: 768px) {
-	#head-title {
-			font-size: 40px;
+@media (max-width: 387px) {
+	#carousel {
+			display: none;
 		}
-	#sub-vision {
-		background-image: url('/img/back-01-01.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
+	
+		#showcase {
+			display: block;
+		}
+	
+		#head-title-2 {
+			font-size: 32px;
+		}
+
+		#agree-check {
+			margin-top: 10px;
+		}
+}
+
+@media (min-width: 388px) and (max-width: 800px) {
+
+	#carousel {
+		display: none;
+	}
+	#showcase {
+		display: block;
+	}
+	#head-title-2 {
+		font-size: 32px;
+	}
+
+	#agree-check {
+		margin-top: 10px;
 	}
 }
