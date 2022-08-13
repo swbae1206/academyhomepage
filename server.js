@@ -1,5 +1,6 @@
 // node_modules의 express 패키지를 가져온다.
 var express = require('express')
+var requestIp = require('request-ip');
 const cors = require('cors');
 
 const dbClient = require("./dbClient");
@@ -46,12 +47,13 @@ app.get('/counseling', function (req, res) {
 
 app.post('/counseling', function (req, res) {
 
-	const queryText = 'INSERT INTO counseling (name, phone, email, date) VALUES($1, $2, $3, $4)';
+	const queryText = 'INSERT INTO counseling (name, phone, email, date, ip) VALUES($1, $2, $3, $4, $5)';
 	const values = [
 		req.body.name,
 		req.body.phone,
 		req.body.email,
-		getDatetime()
+		getDatetime(),
+		requestIp.getClientIp(req)
 	];
 	dbClient
 		.query(queryText, values)
@@ -65,10 +67,11 @@ app.post('/counseling', function (req, res) {
 })
 
 app.post('/newsletter', function (req, res) {
-	const queryText = 'INSERT INTO newsletter (email, date) VALUES($1, $2)';
+	const queryText = 'INSERT INTO newsletter (email, date, ip) VALUES($1, $2, $3)';
 	const values = [
 		req.body.email,
-		getDatetime()
+		getDatetime(),
+		requestIp.getClientIp(req)
 	];
 	dbClient
 		.query(queryText, values)
@@ -82,11 +85,12 @@ app.post('/newsletter', function (req, res) {
 })
 
 app.post('/fee', function (req, res) {
-	const queryText = 'INSERT INTO fee (name, phone, date, courses) VALUES($1, $2, $3, $4)';
+	const queryText = 'INSERT INTO fee (name, phone, date, ip, courses) VALUES($1, $2, $3, $4, $5)';
 	const values = [
 		req.body.name,
 		req.body.phone,
 		getDatetime(),
+		requestIp.getClientIp(req),
 		req.body.courses
 	];
 	dbClient
