@@ -12,8 +12,9 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		crossorigin="anonymous"></script>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+</style>
 	<title>부산IT학원 원IT아카데미</title>
 	<meta name="description" content="부산IT학원, 부산코딩학원, 부산웹개발학원, IT학원, 부산빅데이터, 부산빅데이터학원, ">
 </head>
@@ -49,8 +50,8 @@
 
 	<!-- Showcase -->
 
-	<section id="carousel" class="bg-dark text-light text-start mt-3">
-		<div class="container-fluid p-0">
+	<section class="d-none d-md-block bg-dark text-light text-start mt-3">
+		<div class="container-fluid">
 			<div id="carouselExampleCaptions" class="carousel slide  carousel-fade" data-bs-ride="carousel">
 				<div class="carousel-indicators">
 					<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -74,7 +75,7 @@
 						<div class="carousel-caption d-none d-md-block text-start">
 							<div class="container">
 								<h1 class="head-title fw-bold">웹 개발<br> <span class="text-warning">기초</span>부터 <span  class="text-warning">전문가 과정</span>까지</h1>
-								<p class="lead  my-4 fw-bold">기초 기술부터 단계적으로 학습하여 <br>진정한 IT 전문가로서 최고의 기술을 확보할 수 있습니다</p>
+								<p class="lead  my-4 fw-bold">기초 기술부터 단계적으로 학습하여 <br>그를 바탕으로 진정한 IT 전문가로서 최고의 기술을 확보할 수 있습니다</p>
 								<button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enroll">학습 상담 신청하기</button>
 							</div>
 						</div>
@@ -102,13 +103,13 @@
 		</div>
 	</section>
 
-	<section id="showcase" class="bg-dark text-light text-start mt-3">
+	<section class="d-block d-md-none text-light text-start">
 		<div class="container-fluid p-0">
 			<div id="main">
-				<div class="container px-3 pt-5">
-					<h1 id="head-title-2" class="fw-bold">최고의<br> <span class="text-warning">IT 전문가</span>를 양성합니다</h1>
-					<p class="lead my-4 fw-bold">웹 개발 기초 과정에서 전문가 과정까지<br>현업에서 즉시 활용 가능한 최신 IT 기술을 확보할 수 있습니다</p>
-					<button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enroll">학습 상담 신청하기</button>
+				<div class="p-4 p-sm-5">
+				<h1 class="fw-bold mt-3 " style="line-height: 140%;">최고의<br> <span class="text-warning">IT 전문가</span>를 양성합니다</h1>
+				<p class="my-4">IT 기초 과정에서 전문가 과정까지<br>현업에서 즉시 활용 가능한 최신 IT 기술을 확보할 수 있습니다</p>
+				<button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#enroll">학습 상담 신청하기</button>
 				</div>
 			</div>
 		</div>
@@ -120,9 +121,9 @@
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-12 col-lg-5">
-					<div class="lead fw-bold">IT 학습에 도움이 되는 Newsletter를 받아 보세요.</div>
+					<div class="fs-5 fw-bold">IT 학습에 도움이 되는 Newsletter를 받아 보세요.</div>
 				</div>
-				<div id="agree-check" class="col-12 col-lg-3 d-flex align-items-center justify-content-start">
+				<div id="agree-check" class="col-12 col-lg-3 d-flex align-items-center justify-content-start justify-content-lg-end mt-3 mt-lg-0">
 					<div class="form-check">
 						<input id="newsletter-agree" class="form-check-input" type="checkbox" value="">
 						<label class="form-check-label" for="newsletter-agree"> 개인정보 제공 동의</label>
@@ -146,23 +147,23 @@
 					<div class="row text-center g-3">
 						<div class="col-md">
 							<div class="card shadow p-3 mb-4 bg-white">
-								<div class="card-header p-3 fs-4 fw-bold bg-dark text-white">명확한 학습목표 설정
+								<div class="card-header p-3 fs-4 fw-bold text-white" style="background-color:rgb(83, 158, 67)">명확한 학습목표 설정
 								</div>
-								<p class="card-text my-4">잘못된 IT 기술 학습으로 인한 시간적 경제적 낭비 요소를 사전에 제거합니다</p>
+								<p class="card-text my-4">잘못된 IT 기술 학습으로 발생하는 시간적, 경제적 낭비 요소를 완벽하게 제거합니다</p>
 								<a href="/html/vision.html" class="btn btn-secondary">자세히 보기</a>
 							</div>
 						</div>
 						<div class="col-md">
 							<div class="card shadow p-3 mb-4 bg-white">
-								<div class="card-header p-3 fs-4 fw-bold bg-dark text-white">효과적 학습 로드맵</div>
-								<p class="card-text my-4">개인별 상황에 맞는 맞춤형 학습과정 설계로, 단계별 IT 기술 확보 방안을 제시 합니다</p>
+								<div class="card-header p-3 fs-4 fw-bold text-white" style="background-color:rgb(83, 158, 67)">효과적 학습 로드맵</div>
+								<p class="card-text my-4">개인별 상황에 맞는 맞춤형 학습과정 설계로, 단계별 IT 기술 확보 방안을 제시합니다</p>
 								<a href="/html/roadmap.html" class="btn btn-secondary">자세히 보기</a>
 							</div>
 						</div>
 						<div class="col-md">
 							<div class="card shadow p-3 mb-4 bg-white">
-								<div class="card-header p-3 fs-4 fw-bold bg-dark text-white">학습 결과물 관리</div>
-								<p class="card-text my-4">학습과정에서 생성되는 모든 결과물을 체계적으로 관리하여, 개인의 자산으로 만듭니다 </p>
+								<div class="card-header p-3 fs-4 fw-bold  text-white" style="background-color:rgb(83, 158, 67)">학습 결과물 관리</div>
+								<p class="card-text my-4">각 학습과정에서 생성되는 결과물을 체계적으로 관리하여, 개인의 자산으로 만듭니다 </p>
 								<a href="/html/result.html" class="btn btn-secondary">자세히 보기</a>
 							</div>
 						</div>
@@ -217,7 +218,7 @@
 
 	<section id="course" class="p-3 pt-4 p-lg-5" style="background-color: rgb(203, 200, 200)">
 		<div class="container">
-			<h1 id="course-title" class="text-center text-dark fw-bold mb-4" >강의 코스 안내</h1>
+			<h1 class="text-center text-dark fw-bold mb-4" >강의 코스 안내</h1>
 			<div class="row g-4 mb-4">
 				<div class="col-sm-6 col-lg-3">
 					<div class="card shadow p-1 mb-4 bg-light">
@@ -315,7 +316,7 @@
 
 		<!-- Question Accordion -->
 		
-		<section id="questions" class="p-3 pt-4 p-lg-5">
+		<section id="questions" class="p-0 pt-4 p-lg-5">
 			<div class="container">
 				<h1 class="text-center mb-4 fw-bold">자주 묻는 질문 & 답변</h1>
 				<div class="accordion accordion-flush" id="questions">
@@ -396,7 +397,7 @@
 
 	<!-- Schedult & fee -->
 
-	<section class="bg-primary text-light p-3">
+	<section class="bg-primary text-light p-3 mt-3">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-12 col-md-9">
@@ -405,62 +406,13 @@
 				<div class="col-12 col-md-3">
 					<button class="btn w-100 fs-4 fw-bold" style="background-color:aliceblue" data-bs-toggle="modal" data-bs-target="#feesearch">조회하기</button>
 				</div>
-				<!-- <div class="col-12 col-md-9">
-					<div class="row g-3">
-						<div class="col-sm-3">
-							<label for="exampleFormControlInput1" class="form-label fw-bold">과정선택</label>
-							<select class="form-select" aria-label="Default select example">
-								<option selected>과정을 선택하세요</option>
-								<option value="1">웹 개발 기초</option>
-								<option value="2">웹 개발 전문가</option>
-								<option value="2">데이터베이스</option>
-								<option value="3">AI/Big Data</option>
-								<option value="3">프로젝트 실습</option>
-								<option value="3">포트폴리오/면접</option>
-							</select>
-						</div>
-						<div class="col-sm-3">
-							<label for="exampleFormControlInput1" class="form-label fw-bold">이름</label>
-							<input id="fee-name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="이름">
-						</div>
-						<div class="col-sm-3">
-							<label for="exampleFormControlInput1" class="form-label fw-bold">전화번호</label>
-							<input id="fee-phone" type="text" class="form-control" id="exampleFormControlInput1" placeholder="폰번호">
-						</div>
-						<div class="col-sm-3">
-							<input type="checkbox" for="exampleFormControlInput1" class="form-label"> 개인정보 제공 동의하기</label>
-							<button type="button" class="btn btn-primary w-100 mt-2 fw-bold" onclick="Fee()">조회하기</button>
-						</div>
-					</div>
-				</div> -->
 			</div>
-			<!-- <div class="row align-items-center">
-					<div class="col-12 col-md-3">
-						<div class="fs-3 fw-bold p-3">수강료 및 강의 시간 조회</div>
-					</div>
-					<div class="col-12 col-md-9">
-						<div class="row g-3">
-							<div class="col-sm-4">
-								<label for="exampleFormControlInput1" class="form-label fw-bold">이름</label>
-								<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-							</div>
-							<div class="col-sm-4">
-								<label for="exampleFormControlInput1" class="form-label fw-bold">전화번호</label>
-								<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-							</div>
-							<div class="col-sm-4">
-								<input type="checkbox" for="exampleFormControlInput1" class="form-label"> 개인정보 제공 동의하기</label>
-								<button type="submit" class="btn btn-primary w-100 mt-2 fw-bold">조회하기</button>
-							</div>
-						</div>
-					</div>
-				</div> -->
 		</div>
 	</section>
 
 	<!-- Contact Info -->
 
-	<section class="p-3 pt-4 p-lg-5" id="contact">
+	<section class="p-0 pt-4 p-lg-5" id="contact">
 		<div class="container">
 			<div class="row g-4">
 				<div class="col-md">
@@ -497,10 +449,9 @@
 
 	<!-- Footer -->
 
-	<footer class="p-3 p-lg-5 bg-dark text-white text-center position-relative">
+	<footer class="p-3 p-lg-5 mt-3 bg-dark text-white text-center position-relative">
 		<div class="container">
-			Copyright &copy; 2022<br>ONE IT Academy
-			<a href="#" class="position-absolute bottom-0 end-0 p-5"><i class="bi bi-arrow-up-circle h1"></i></a>
+			<small>Copyright &copy; 2022<br>ONE IT Academy</small>
 		</div>
 	</footer>
 
@@ -514,7 +465,7 @@
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body mt-0 pt-2">
-					<div class="p-0 fs-5 fw-bold text-dark">
+					<div class="p-0 fs-6 text-dark">
 						IT 학습에 대해<br>무엇이든 문의하세요<br>최고의 IT 전문가의 길로 안내해 드리겠습니다
 					</div>
 					<hr>

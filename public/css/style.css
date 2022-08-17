@@ -4,6 +4,10 @@ body::before {
 	height: 60px;
 }
 
+body {
+	font-family: 'Gothic A1', sans-serif;
+}
+
 #map {
 	width: 100%;
 	height: 100%;
@@ -14,20 +18,35 @@ body::before {
 	scroll-margin-top: 5em;
 }
 
-#showcase {
-	display: none;
+div.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 150px;
+}
+
+#othercoursetitle {
+	border: 1px solid grey;
+	border-radius: 10px;
+	background-color: rgb(240, 240, 240)
+}
+
+.othercourselink {
+	text-decoration: none;
+	color: grey;
+}
+.othercourselink:hover {
+	color: rgb(6, 24, 190)
 }
 
 #main {
 	background-image: url('/img/main-100.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 350px;
 }
 
 .head-title {
 	font-size: 45px;
-	line-height: 130%;
+	line-height: 140%;
 }
 
 #course-title-01 {
@@ -98,58 +117,15 @@ body::before {
 	text-shadow: 0px 0px 5px black;
 }
 
-.fee-circle {
-	display: flex;
-	justify-content: end;
-	align-items: center;
-}
-
 .fee-selector {
 	 text-decoration: none;
 	 color: black;
 }
 
-@media (max-width: 387px) {
-	#carousel {
-			display: none;
-		}
-	
-		#showcase {
-			display: block;
-		}
-	
-		#head-title-2 {
-			font-size: 32px;
-		}
-
-		#agree-check {
-			margin-top: 10px;
-		}
-
-		#course-title {
-			font-size: 30px;
-					font-weight:bolder;
-		}
+.fee-circle {
+	display: none;
 }
 
-@media (min-width: 388px) and (max-width: 800px) {
-
-	#carousel {
-		display: none;
-	}
-	#showcase {
-		display: block;
-	}
-	#head-title-2 {
-		font-size: 32px;
-	}
-
-	#agree-check {
-		margin-top: 10px;
-	}
-
-	#course-title {
-		font-size: 30px;
-		font-weight: bolder;
-	}
+.lowerfeesearch {
+	background-color:rgb(240, 240, 240)
 }
