@@ -60,6 +60,7 @@ function Newsletter() {
 	}
 	if (!verifyEmail(email.value)) {
 		alert("정확한 email을 입력하세요.");
+		email.value = "";
 		return;
 	}
 	fetch("https://oneitacademy.com/newsletter", {
