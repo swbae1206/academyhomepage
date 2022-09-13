@@ -502,9 +502,9 @@
 			</div>
 		</section>
 
-	<!-- Schedult & fee -->
+	<!-- Schedule & fee -->
 
-	<section class="bg-primary text-light p-3 mt-3">
+	<section class="bg-primary text-light p-3">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-12 col-md-9">
@@ -526,7 +526,8 @@
 					<h1 class="text-center mb-4 fw-bold">연락처 및 위치</h1>
 					<ul class="list-group list-group-flush">
 						<li class="list-group-item">
-							<h3 class="fw-bold">원아이티아카데미학원</h3>		
+							<h3 class="fw-bold">원아이티아카데미학원</h3>	
+							<button class="btn btn-lg mb-4 text-white" data-bs-toggle="modal" data-bs-target="#lecturer" style="background-color:rgb(121, 82, 179)">대표강사(원장) 경력 보기</button>
 						</li>
 						<li class="list-group-item">
 							<span class="fw-bold lead">주소</span>
@@ -634,6 +635,30 @@
 			</div>
 		</div>
 	</div>
+
+		<div class="modal fade" id="lecturer" tabindex="-1" aria-labelledby="lecturerLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content p-3"  style="background-color:rgb(121, 82, 179)">
+					<div class="modal-header border-0 text-white">
+						<h2 class="modal-title fw-bold text-white" id="lecturerLabel">대표강사(원장) 경력</h2>
+						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body mt-0 pt-2" style="max-height: 999999px;">
+						<div class="p-0 fs-6 text-white">
+							<ul>
+								<li>삼성종합기술원 근무<br>(그룹연구소, S/W 개발)</li>
+								<li>삼성SDS 기술연구소 근무<br>(국내 최초 국산CAD UniCAD 개발/상품화)</li>
+								<li>삼성중공업 대덕중앙연구소 근무<br>(PDM 개발 & 중장비공장 EPI 추진)</li>
+								<p class="my-3">* 삼성그룹 제직시 그룹기술상으로 이건희 회장상 2회 수상</p>
+								<li>IT 벤처창업 및 15년간 운영(CEO)<br>(주요 고객사 : 현대중공업, 두산중공업, 삼성중공업, 미국 Intergraph사 외 다수)</li>
+							</ul>
+						</div>
+						<hr style="height: 2px; color: #fff">
+						<p class="text-white">IT 현장에서 직접 다양한 웹 애플리케이션을 개발해온 IT 개발 전문가로, 약 30여년간의 경험과 최신 기술의 노하우를 전수하여, 4차 산업혁명을 주도하는 차별화된 IT 개발 전문가를 양성합니다</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
 	<div class="modal fade" id="feesearch" tabindex="-1" aria-labelledby="enrollLabel" aria-hidden="true" >
 		<div class="modal-dialog" style="position: relative;">
