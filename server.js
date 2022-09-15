@@ -5,6 +5,9 @@ const cors = require('cors');
 
 const dbClient = require("./dbClient");
 
+var favicon = require('serve-favicon');
+
+출처: https://askforyou.tistory.com/37 [일상과 개발:티스토리]
 //app이라는 변수에 express 함수의 변환 값을 저장한다.
 var app = express()
 
@@ -21,13 +24,21 @@ console.log(publicDir);
 // app.use(express.static('public'));
 app.use(express.static('public'));
 
+app.use(favicon(require('path').join(__dirname, 'public', 'favicon.ico')));
+
 
 //REST API의 한가지 종류인 GET 리퀘스트를 정의하는 부분입니다.
 //app.get이라고 작성했기 때문에 get 요청으로 정의가 되고
 //app.post로 작성할 경우 post 요청으로 정의가 됩니다.
 //REST API의 종류 (get, post, update, delete 등등)을 사용하여 End Point를 작성하실 수 있습니다.
 app.get('/', function (req, res) {
-	res.sendFile(publicDir + "/html/index.html");
+	res.sendFile(__dirname + "/index.html");
+})
+app.get('/index', function (req, res) {
+	res.sendFile(__dirname + "/index.html");
+})
+app.get('/index.html', function (req, res) {
+	res.sendFile(__dirname + "/index.html");
 })
 
 app.get('/counseling', function (req, res) {
