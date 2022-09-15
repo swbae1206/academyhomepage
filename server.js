@@ -49,6 +49,15 @@ app.get('/robots.txt', function (req, res) {
 	res.sendFile(__dirname + "/robots.txt");
 })
 
+app.get('/rss.xml', function (req, res) {
+	res.sendFile(__dirname + "/rss.xml");
+})
+
+app.get('/sitemap.xml', function (req, res) {
+	res.sendFile(__dirname + "/sitemap.xml");
+})
+
+
 
 app.get('/counseling', function (req, res) {
 
