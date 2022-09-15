@@ -41,6 +41,15 @@ app.get('/index.html', function (req, res) {
 	res.sendFile(__dirname + "/index.html");
 })
 
+app.get('/naver140934d58ca2161fd52a754915c20568.html', function (req, res) {
+	res.sendFile(__dirname + "/naver140934d58ca2161fd52a754915c20568.html");
+})
+
+app.get('/robots.txt', function (req, res) {
+	res.sendFile(__dirname + "/robots.txt");
+})
+
+
 app.get('/counseling', function (req, res) {
 
 	const queryText = 'select * from counseling';
