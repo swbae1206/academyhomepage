@@ -23,8 +23,8 @@ body {
 	border-radius: 10px;
 }
 
-#features, #course, #contact {
-	scroll-margin-top: 5em;
+#features, #course, #contact, #newsletter, #high-contents, #middle-contents, #elementary-contents {
+	scroll-margin-top: 75px;
 }
 
 div.sticky {
@@ -96,6 +96,11 @@ div.sticky {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+#course-title-09 {
+	background-image: url('/img/course-title-09.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 #course-title-10 {
 	background-image: url('/img/course-title-10.jpg');
 	background-repeat: no-repeat;
@@ -134,5 +139,19 @@ div.sticky {
 }
 
 .lowerfeesearch {
-	background-color:rgb(240, 240, 240)
+	background-color:rgb(240, 240, 240);
+}
+
+#middle {
+	background-color: rgb(58, 218, 146);
+}
+#middle:hover {
+	background-color: rgb(35, 187, 118);
+}
+#elementary {
+	background-color: rgb(255, 232, 167);
+}
+
+#elementary:hover {
+	background-color: rgb(255, 213, 93);
 }
