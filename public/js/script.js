@@ -34,7 +34,7 @@ function Counseling() {
 		alert("개인정보 제공에 동의해 주세요.");
 		return;
 	}
-	fetch("http://localhost:3500/counseling", {
+	fetch("https://oneitacademy.com/counseling", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -72,7 +72,7 @@ function Newsletter() {
 		email.value = "";
 		return;
 	}
-	fetch("http://localhost:3500/newsletter", {
+	fetch("https://oneitacademy.com/newsletter", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -117,7 +117,7 @@ function Fee() {
 		return;
 	}
 
-	fetch("http://localhost:3500/fee", {
+	fetch("https://oneitacademy.com/fee", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
