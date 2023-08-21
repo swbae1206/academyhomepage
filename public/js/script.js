@@ -1,3 +1,8 @@
+function timestamp() {
+	var today = new Date();
+	today.setHours(today.getHours() + 9);
+	return today.toISOString().replace('T', ' ').substring(0, 19);
+}
 
 verifyEmail = function (value) {
 	var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
@@ -15,6 +20,8 @@ function Counseling() {
 	let phone = document.getElementById("phone");
 	let email = document.getElementById("email");
 	let agree = document.getElementById("counseling-agree");
+	let date = timestamp();
+
 	if (name.value.trim() === "") {
 		alert("이름을 입력해주세요")
 		return;
@@ -27,7 +34,7 @@ function Counseling() {
 		alert("개인정보 제공에 동의해 주세요.");
 		return;
 	}
-	fetch("https://oneitacademy.com/counseling", {
+	fetch("http://localhost:3500/counseling", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -36,6 +43,7 @@ function Counseling() {
 			name: name.value,
 			phone: phone.value,
 			email: email.value,
+			date: date
 		}),
 	})
 		.then(function () {
@@ -48,6 +56,7 @@ function Counseling() {
 function Newsletter() {
 	let email = document.getElementById("newsletter-email");
 	let agree = document.getElementById("newsletter-agree");
+	let date = timestamp();
 
 	if (!agree.checked) {
 		alert("개인정보 제공에 동의해 주세요.");
@@ -63,13 +72,14 @@ function Newsletter() {
 		email.value = "";
 		return;
 	}
-	fetch("https://oneitacademy.com/newsletter", {
+	fetch("http://localhost:3500/newsletter", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
 		},
 		body: JSON.stringify({
-			email: email.value
+			email: email.value,
+			date: date
 		}),
 	})
 		.then(function () {
@@ -92,6 +102,7 @@ function Fee() {
 	let name = document.getElementById("fee-name");
 	let phone = document.getElementById("fee-phone");
 	let agree = document.getElementById("fee-agree");
+	let date = timestamp();
 	if (name.value.trim() === "") {
 		alert("이름을 입력하세요.");
 		return;
@@ -106,7 +117,7 @@ function Fee() {
 		return;
 	}
 
-	fetch("https://oneitacademy.com/fee", {
+	fetch("http://localhost:3500/fee", {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
@@ -114,7 +125,8 @@ function Fee() {
 		body: JSON.stringify({
 			name: name.value,
 			phone: phone.value,
-			courses: courses
+			courses: courses,
+			date: date
 		}),
 	})
 		.then(function () {
